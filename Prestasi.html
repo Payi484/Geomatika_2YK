@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jurusan Geomatika - SMKN 2 Yogyakarta</title>
+  <link rel="website icon" type="png" href="New folder/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-image: url('New folder/header+logo.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+    header h1 {
+      font-size: 3em;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    nav {
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 15px 60px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #00695c;
+      color: black;
+    }
+   
+    footer {
+      background-color: #004d40;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
+
+    .footer-column p i {
+      font-size: 30px;
+      padding: 20px 0 0 0;
+    }
+    
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      color: #000;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 10px;
+      padding: 0 30px 0 30px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .social-icons i {
+       font-size: 30px;
+       padding: 20px 10px 0 0;
+    }
+
+    .social-icons a:hover {
+      color: #000;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 10px;
+      background-color: #004d40;
+      font-size: 15px;
+      color: white;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2aa590;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    footer p {
+      color: white;
+    }
+    footer h3 {
+      color: white;
+    }
+
+    .map {
+      padding: 10px 0 0 0;
+    }
+    .map h3 {
+      padding: 0 20px 0 20px;
+    }
+
+  
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      width: 300px;
+      height: 500px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 16px;
+    }
+    .card-content h3 {
+      color: #004d40;
+      font-size: 18px;
+    }
+    .card-content p {
+      color: #888;
+      font-size: 14px;
+    }
+  
+    .popup {
+      position: fixed;
+      display: none;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .popup:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jurusan Geomatika<br>SMKN 2 Yogyakarta</h1>
+  </header>
+  <nav>
+    <a href="Beranda.html">Beranda</a>
+    <a href="Profil Jurusan.html">Profil Jurusan</a>
+    <a href="Album.html">Album</a>
+    <a href="Prestasi.html">Prestasi</a>
+    <a href="Buku Tamu.html">Buku Tamu</a>
+  </nav>
+  <section>
+    <h2 style="text-align: center; color: #004d40;">Prestasi Siswa Geomatika</h2>
+    <div class="gallery">
+      <div class="card" onclick="openPopup('New folder/prestasi2.jpg')">
+        <img src="New folder/prestasi2.jpg" alt="Prestasi Coswalk Skaduta Festival 2023">
+        <div class="card-content">
+          <h3>Juara 3 Coswalk</h3>
+          <p>2023</p>
+          <p>Diraih dalam ajang Skaduta Festival.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/prestasi1.jpg')">
+        <img src="New folder/prestasi1.jpg" alt="Juara 2 Voli Putri 2023">
+        <div class="card-content">
+          <h3>Juara 2 Voli Putri</h3>
+          <p>2023</p>
+          <p>Diraih oleh tim Geomatika dalam Skaduta Festival 2023.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/prestasi3.jpg')">
+        <img src="New folder/prestasi3.jpg" alt="Juara Umum Pertika 2024">
+        <div class="card-content">
+          <h3>Juara Umum Pertika</h3>
+          <p>2024</p>
+          <p>Diraih oleh Dewan Ambalan pada Pertika 18 Mei 2024.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/p5.jpg')">
+        <img src="New folder/p5.jpg" alt="Juara 1 Jelajah Medan 2024">
+        <div class="card-content">
+          <h3>Juara 1 Jelajah Medan</h3>
+          <p>2024</p>
+          <p>Dewan Ambalan dalam Pertika 18 Mei 2024.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/p6.jpg')">
+        <img src="New folder/p6.jpg" alt="Juara 2 Komunikasi Lapangan 2024">
+        <div class="card-content">
+          <h3>Juara 2 Komunikasi Lapangan</h3>
+          <p>2024</p>
+          <p>Dewan Ambalan dalam Pertika 2024.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/p7.jpg')">
+        <img src="New folder/p7.jpg" alt="Juara 1 Festival Kesenian Rakyat 2024">
+        <div class="card-content">
+          <h3>Juara 1 Festival Kesenian Rakyat</h3>
+          <p>2024</p>
+          <p>Dewan Ambalan dalam Pertika 2024.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openPopup('New folder/p8.jpg')">
+        <img src="New folder/p8.jpg" alt="Juara 3 Coswalk OSIS MPK 2024">
+        <div class="card-content">
+          <h3>Juara 3 Coswalk</h3>
+          <p>2024</p>
+          <p>Dalam acara OSIS MPK SMKN 2 Yogyakarta.</p>
+        </div>
+      </div>
+
+      
+      <div class="card" onclick="openPopup('New folder/p9.jpg')">
+        <img src="New folder/p9.jpg" alt="Kenang kenangan">
+        <div class="card-content">
+          <h3>Kenang Kenangan</h3>
+          <p>Dari Kantor Pertanahan Kabupaten Gresik</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <div class="popup" id="popup">
+    <img src="" id="popup-img">
+  </div>
+
+
+  <footer>
+     <div class="footer-column">
+      <img src="New folder/logo.png" alt="logo" style="width: 300px; height: 150px;">
+      <p>Teknik Geomatika atau teknik survey pemetaan adalah ilmu perpaduan antara Ilmu Geodesi dan Ilmu Informatika. Oleh sebab itu, kompetensi keahlian ini mempelajari bagaimana mengintegrasikan pengumpulan, permodelan, analisis, hingga management data spesial(berbasis lokasi) yang berdasarkan Ilmu Geodesi.</p>
+     </div>
+      <div class="footer-column">
+        <h3>Kontak</h3>
+        <p><i class="fas fa-map-marker"></i>Jl. AM. Sangaji 47 Yogyakarta
+          Cokrodiningratan, Jetis, Yogyakarta 55233</p>
+        <p><i class="fas fa-phone"></i>(0274) 513490 / (0274) 512639</p>
+        <p><a href="https://www.smk2-yk.sch.id/"><i class="fas fa-envelope"></i>info@smk2-yk.sch.id</p>
+      </div>
+      <div class="footer-column">
+        <h3>Media Sosial</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/SMK2YK/?locale=id_ID"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/smkn2yogyakarta?igsh=MTU0ZWlmMHJmMnpyZA=="><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@smkn2yogyakarta?si=KTHPtCVpxcMNCq5o"><i class="fab fa-youtube"></i></a>
+          <a href="https://twitter.com/smkn2yogyakarta/status/1267213228339150853"><i class="fab fa-x"></i></a>
+          <a href="https://www.tiktok.com/@smk2yogyakarta?_t=ZS-8vjhWj5bLB2&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="map">
+        <h3>Maps</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1976.5596835862038!2d110.3659802!3d-7.7771659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58373fffffff%3A0xa4ec1ca156555926!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sen!2sid!4v1745304600135!5m2!1sen!2sid"
+      width="300" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </footer>  
+    <div class="footer-bottom">
+      © 2025 Fahri SIJA 1 SMK Negeri 2 Yogyakarta.
+    </div>
+    <a href="#" class="scroll-top">↑</a>
+    <script>
+      function openPopup(src) {
+        document.getElementById('popup-img').src = src;
+        document.getElementById('popup').style.display = 'flex';
+      }
+      document.getElementById('popup').onclick = function() {
+        this.style.display = 'none';
+      }
+    </script>
+</body>
+</html>
+
+
