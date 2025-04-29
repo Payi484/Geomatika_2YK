@@ -1,0 +1,1 @@
+# Geomatika_2YK
